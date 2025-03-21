@@ -3,6 +3,8 @@ package com.losconfort.confortstarterrest.helper;
 import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import jakarta.transaction.Transactional;
 import java.io.Serializable;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -21,6 +23,7 @@ public abstract class DefaultServiceImpl<
   @Transactional
   public M create(M model) {
     model.setId(null);
+    model.setCreatedAt(Timestamp.valueOf(LocalDateTime.now()));
     return this.repository.save(model);
   }
 
@@ -36,13 +39,15 @@ public abstract class DefaultServiceImpl<
       throw new ResourceNotFoundException();
     }
     model.setId(id);
+    model.setUpdatedAt(Timestamp.valueOf(LocalDateTime.now()));
     return this.repository.save(model);
   }
 
   @Override
   public M delete(I id) {
     M model = this.repository.findById(id).orElseThrow(ResourceNotFoundException::new);
-    this.repository.delete(model);
+    model.setDeletedAt(Timestamp.valueOf(LocalDateTime.now()));
+    this.repository.save(model);
     return model;
   }
 }
