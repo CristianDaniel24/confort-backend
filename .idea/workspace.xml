@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="74dd7d81-6e33-4197-96d9-0bf59d0eea04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/confort-backend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/CarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/PersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/TypeCarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/CarControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/ClientControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/PersonControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/TypeCarControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/CarModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ClientModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/PersonModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/TypeCarModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/CarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/PersonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/TypeCarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/CarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/PersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/TypeCarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/CarServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/ClientServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/PersonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/TypeCarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/common/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/config/advice/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/dto/ErrorResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/enums/ErrorCodeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/exception/UniqueConstraintViolationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/exception/UniqueConstraintViolationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/helper/DefaultModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/helper/DefaultModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/helper/DefaultServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/helper/DefaultServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/src/main/resources/META-INF/spring.factories" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/classes/META-INF/spring.factories" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/common/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/config/advice/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/dto/ErrorResponseDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/enums/ErrorCodeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/exception/ResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/exception/UniqueConstraintViolationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/exception/UniqueConstraintViolationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/helper/DefaultModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/helper/DefaultModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/helper/DefaultServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/helper/DefaultServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/confort-starter-rest-0.1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/db/confort.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/confort/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/config/advice/ExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/config/aspect/LoggingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/controller/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/controller/impl/PersonControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/enums/PaymentEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/enums/ProcedureEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/enums/ServiceEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Bill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Payment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Procedure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Rol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/ShoppingCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/TypeCar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/model/TypeProcedure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/repository/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/service/PersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/service/impl/PersonServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/resources/application-dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/application-dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/config/advice/ExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/config/aspect/LoggingAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/controller/PersonController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/controller/impl/PersonControllerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/repository/PersonRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/service/PersonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/service/impl/PersonServiceImpl.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2ueaghHyJi7H3xM0z77MKn1NPHQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven.confort-starter-rest [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "feature/create-crud",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/crist/Documents/SENA/TAPICERIA CONFORT/confort-backend/confort/src/main/java/com/losconfort/confort/model",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort\src\main\java\com\losconfort\confort\model" />
+      <recent name="C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort\src\main\java\com\losconfort\confort\entity" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.losconfort.confort.Main" />
+      <module name="confort" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.losconfort.confort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74dd7d81-6e33-4197-96d9-0bf59d0eea04" name="Changes" comment="" />
+      <created>1742611606778</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742611606778</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.senav2.pickitbootstarterrest.AutoConfiguration
+com.losconfort.confortstarterrest.AutoConfiguration
