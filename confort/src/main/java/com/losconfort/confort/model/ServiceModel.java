@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import java.io.Serial;
 import java.sql.Timestamp;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Data
 @Entity
@@ -43,4 +45,12 @@ public class ServiceModel extends DefaultModel<Long> {
   @ManyToOne
   @JoinColumn(name = "car_id", columnDefinition = "BIGINT", nullable = false)
   private CarModel carModel;
+
+  @CreationTimestamp
+  @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
+  private Timestamp createdAt;
+
+  @UpdateTimestamp
+  @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
+  private Timestamp updatedAt;
 }

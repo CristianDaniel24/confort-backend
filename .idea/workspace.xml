@@ -5,35 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74dd7d81-6e33-4197-96d9-0bf59d0eea04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/BillController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/ServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/ShoppingCartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/BillControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/PaymentControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/ServiceControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/ShoppingCartControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/enums/PaymentEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/enums/ServiceEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/BillModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/PaymentModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ServiceModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ShoppingCartModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/BillRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/PaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/ServiceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/ShoppingCartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/BillService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/ServiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/ShoppingCartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/BillServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/ServiceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/ProviderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/RolController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/TypeProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/ProductControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/ProviderControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/RolControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/TypeProductControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/enums/TypeProductEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ProductModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ProviderModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/RolModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/TypeProductModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/ProviderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/RolRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/TypeProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/ProviderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/RolService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/TypeProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/ProviderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/RolServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/TypeProductModelImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/PersonControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/PersonControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/controller/impl/PersonControllerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/controller/impl/PersonControllerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/BillModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/BillModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/CarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/CarModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ClientModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ClientModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/PaymentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/PaymentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/PersonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/PersonModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ServiceModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ServiceModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ShoppingCartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/ShoppingCartModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/resources/application-dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/application-dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/BillModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/BillModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/CarModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/CarModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/ClientModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/ClientModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/PaymentModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/PaymentModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/PersonModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/PersonModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/ServiceModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/ServiceModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/ShoppingCartModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/ShoppingCartModel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

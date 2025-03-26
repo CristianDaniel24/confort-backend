@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Data
 @Entity
@@ -32,4 +34,12 @@ public class BillModel extends DefaultModel<Long> {
   @OneToOne
   @JoinColumn(name = "shopping_cart_id", columnDefinition = "BIGINT", nullable = false)
   private ShoppingCartModel shoppingCart;
+
+  @CreationTimestamp
+  @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
+  private Timestamp createdAt;
+
+  @UpdateTimestamp
+  @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
+  private Timestamp updatedAt;
 }

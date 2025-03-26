@@ -3,11 +3,14 @@ package com.losconfort.confort.model;
 import com.losconfort.confortstarterrest.helper.DefaultModel;
 import jakarta.persistence.*;
 import java.io.Serial;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Data
 @Entity
@@ -49,4 +52,12 @@ public class PersonModel extends DefaultModel<Long> {
 
   @Column(columnDefinition = "DATE", nullable = false)
   private LocalDate dateOfBirth;
+
+  @CreationTimestamp
+  @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
+  private Timestamp createdAt;
+
+  @UpdateTimestamp
+  @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
+  private Timestamp updatedAt;
 }

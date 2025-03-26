@@ -1,6 +1,6 @@
 package com.losconfort.confort.model;
 
-import com.losconfort.confort.enums.PaymentEnum;
+import com.losconfort.confort.enums.TypeProductEnum;
 import com.losconfort.confortstarterrest.helper.DefaultModel;
 import jakarta.persistence.*;
 import java.io.Serial;
@@ -16,23 +16,19 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "payment")
+@Table(name = "type_product")
 @EqualsAndHashCode(callSuper = false)
-public class PaymentModel extends DefaultModel<Long> {
+public class TypeProductModel extends DefaultModel<Long> {
 
-  @Serial private static final long serialVersionUID = 248201153869792766L;
+  @Serial private static final long serialVersionUID = -4762021520723437472L;
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @OneToOne
-  @JoinColumn(name = "bill_id", columnDefinition = "BIGINT", nullable = false)
-  private BillModel bill;
-
   @Enumerated(EnumType.STRING)
-  @Column(name = "method", nullable = false)
-  private PaymentEnum method;
+  @Column(name = "type", nullable = false)
+  private TypeProductEnum type;
 
   @CreationTimestamp
   @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
