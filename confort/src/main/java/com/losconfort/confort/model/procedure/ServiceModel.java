@@ -43,14 +43,6 @@ public class ServiceModel extends DefaultModel<Long> {
   @Column(name = "completed_at", columnDefinition = "TIMESTAMP", nullable = false)
   private Timestamp completedAt;
 
-  @CreationTimestamp
-  @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
-  private Timestamp createdAt;
-
-  @UpdateTimestamp
-  @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
-  private Timestamp updatedAt;
-
   @ManyToOne
   @JoinColumn(name = "car_id", columnDefinition = "BIGINT", nullable = false)
   private CarModel car;
@@ -58,4 +50,12 @@ public class ServiceModel extends DefaultModel<Long> {
   @ManyToOne
   @JoinColumn(name = "procedure_id", columnDefinition = "BIGINT", nullable = false)
   private ProcedureModel procedure;
+
+  @CreationTimestamp
+  @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
+  private Timestamp createdAt;
+
+  @UpdateTimestamp
+  @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
+  private Timestamp updatedAt;
 }

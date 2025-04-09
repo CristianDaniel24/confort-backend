@@ -1,4 +1,4 @@
-package com.losconfort.confort.model.provider;
+package com.losconfort.confort.model;
 
 import com.losconfort.confortstarterrest.helper.DefaultModel;
 import jakarta.persistence.*;
@@ -15,18 +15,13 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "type_product")
+@Table(name = "service_employee")
 @EqualsAndHashCode(callSuper = false)
-public class TypeProductModel extends DefaultModel<Long> {
+public class ServiceEmployeeModel extends DefaultModel<ServiceEmployeePK> {
 
-  @Serial private static final long serialVersionUID = -4762021520723437472L;
+  @Serial private static final long serialVersionUID = -5193494660566744961L;
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
-
-  @Column(name = "type", columnDefinition = "VARCHAR(50)", nullable = false)
-  private String type;
+  @EmbeddedId private ServiceEmployeePK id;
 
   @CreationTimestamp
   @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
