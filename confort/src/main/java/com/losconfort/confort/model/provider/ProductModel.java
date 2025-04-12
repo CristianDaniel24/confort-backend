@@ -45,7 +45,7 @@ public class ProductModel extends DefaultModel<Long> {
   @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
   private Timestamp updatedAt;
 
-  @OneToOne
+  @ManyToOne
   @JoinColumn(name = "type_product_id", columnDefinition = "BIGINT", nullable = false)
   private TypeProductModel typeProduct;
 

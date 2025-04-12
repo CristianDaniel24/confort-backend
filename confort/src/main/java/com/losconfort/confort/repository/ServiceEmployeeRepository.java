@@ -7,4 +7,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ServiceEmployeeRepository
-    extends DefaultRepository<ServiceEmployeeModel, ServiceEmployeePK> {}
+    extends DefaultRepository<ServiceEmployeeModel, ServiceEmployeePK> {
+
+  // Este metodo borrara todas las relaciones de empleados asociadas a un servicio
+  void deleteByIdServiceId(Long serviceId);
+}

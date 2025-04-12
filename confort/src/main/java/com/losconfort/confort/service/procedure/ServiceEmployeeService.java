@@ -5,4 +5,7 @@ import com.losconfort.confort.model.procedure.ServiceEmployeePK;
 import com.losconfort.confortstarterrest.helper.DefaultService;
 
 public interface ServiceEmployeeService
-    extends DefaultService<ServiceEmployeeModel, ServiceEmployeePK> {}
+    extends DefaultService<ServiceEmployeeModel, ServiceEmployeePK> {
+
+  void deleteByServiceId(Long serviceId);
+}

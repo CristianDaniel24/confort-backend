@@ -5,9 +5,9 @@ import com.losconfort.confort.model.cart.ShoppingCartProductModel;
 import com.losconfort.confort.model.cart.ShoppingCartProductPK;
 import com.losconfort.confort.model.provider.ProductModel;
 import com.losconfort.confort.repository.ShoppingCartProductRepository;
-import com.losconfort.confort.repository.cart.ShoppingCartRepository;
-import com.losconfort.confort.repository.provider.ProductRepository;
 import com.losconfort.confort.service.cart.ShoppingCartProductService;
+import com.losconfort.confort.service.cart.ShoppingCartService;
+import com.losconfort.confort.service.provider.ProductService;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,50 +18,49 @@ public class ShoppingCartProductServiceImpl
         ShoppingCartProductModel, ShoppingCartProductPK, ShoppingCartProductRepository>
     implements ShoppingCartProductService {
 
-  private final ShoppingCartRepository shoppingCartRepository;
-  private final ProductRepository productRepository;
+  private final ShoppingCartService shoppingCartService;
+  private final ProductService productService;
 
   public ShoppingCartProductServiceImpl(
       ShoppingCartProductRepository repository,
-      ShoppingCartRepository shoppingCartRepository,
-      ProductRepository productRepository) {
+      ShoppingCartService shoppingCartService,
+      ProductService productService) {
     super(repository);
-    this.shoppingCartRepository = shoppingCartRepository;
-    this.productRepository = productRepository;
+    this.shoppingCartService = shoppingCartService;
+    this.productService = productService;
   }
 
   @Override
   @Transactional
   public ShoppingCartProductModel create(ShoppingCartProductModel model) {
+
+    ShoppingCartProductPK pk = new ShoppingCartProductPK();
+    pk.setShoppingCart(getShoppingCart(model));
+    pk.setProduct(getProduct(model));
+    model.setId(pk);
+
+    return repository.save(model);
+  }
+
+  private ShoppingCartModel getShoppingCart(ShoppingCartProductModel model) {
     Long shoppingCartId =
         model.getId() != null && model.getId().getShoppingCart() != null
             ? model.getId().getShoppingCart().getId()
             : null;
+    if (shoppingCartId == null) {
+      throw new RuntimeException("El ID de shoppingCart es null");
+    }
+    return shoppingCartService.read(shoppingCartId);
+  }
 
+  private ProductModel getProduct(ShoppingCartProductModel model) {
     Long productId =
         model.getId() != null && model.getId().getProduct() != null
             ? model.getId().getProduct().getId()
             : null;
-
-    if (shoppingCartId == null || productId == null) {
-      throw new RuntimeException("ID de shoppingCart o Product es null");
+    if (productId == null) {
+      throw new RuntimeException("El ID de Product es null");
     }
-
-    ShoppingCartModel shoppingCart =
-        shoppingCartRepository
-            .findById(shoppingCartId)
-            .orElseThrow(() -> new RuntimeException("ShoppingCart no encontrado"));
-
-    ProductModel product =
-        productRepository
-            .findById(productId)
-            .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
-
-    ShoppingCartProductPK pk = new ShoppingCartProductPK();
-    pk.setShoppingCart(shoppingCart);
-    pk.setProduct(product);
-    model.setId(pk);
-
-    return repository.save(model);
+    return productService.read(productId);
   }
 }

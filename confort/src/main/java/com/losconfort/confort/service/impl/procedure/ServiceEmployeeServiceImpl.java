@@ -10,6 +10,7 @@ import com.losconfort.confort.service.procedure.ServiceEmployeeService;
 import com.losconfort.confort.service.procedure.ServiceService;
 import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -34,22 +35,15 @@ public class ServiceEmployeeServiceImpl
   @Transactional
   public ServiceEmployeeModel create(ServiceEmployeeModel model) {
 
-    Long serviceId = getService(model);
-    Long employeeId = getEmployee(model);
-
-    ServiceModel service = serviceService.read(serviceId);
-    EmployeeModel employee = employeeService.read(employeeId);
-
     ServiceEmployeePK pk = new ServiceEmployeePK();
-    pk.setService(service);
-    pk.setEmployee(employee);
-
+    pk.setService(this.getService(model));
+    pk.setEmployee(this.getEmployee(model));
     model.setId(pk);
 
     return repository.save(model);
   }
 
-  private Long getService(ServiceEmployeeModel model) {
+  private ServiceModel getService(ServiceEmployeeModel model) {
     Long serviceId =
         model.getId() != null && model.getId().getService() != null
             ? model.getId().getService().getId()
@@ -57,10 +51,10 @@ public class ServiceEmployeeServiceImpl
     if (serviceId == null) {
       throw new ResourceNotFoundException("El id del servicio es null");
     }
-    return serviceId;
+    return this.serviceService.read(serviceId);
   }
 
-  private Long getEmployee(ServiceEmployeeModel model) {
+  private EmployeeModel getEmployee(ServiceEmployeeModel model) {
     Long employeeId =
         model.getId() != null && model.getId().getEmployee() != null
             ? model.getId().getEmployee().getId()
@@ -68,9 +62,11 @@ public class ServiceEmployeeServiceImpl
     if (employeeId == null) {
       throw new ResourceNotFoundException("El id del empleado es null");
     }
-    return employeeId;
+    return this.employeeService.read(employeeId);
   }
 
-  // METODO privado getService
-  // METODO privado getEmployee
+  @Override
+  public void deleteByServiceId(Long serviceId) {
+    this.repository.deleteByIdServiceId(serviceId);
+  }
 }
