@@ -47,7 +47,9 @@ public class PersonModel extends DefaultModel<Long> {
   @Column(columnDefinition = "VARCHAR(150)", nullable = false)
   private String address;
 
-  @Column(columnDefinition = "VARCHAR(150)", nullable = false)
+  @Column(
+      columnDefinition = "VARCHAR(150)",
+      nullable = false) // Poner la anotacion para que sea unico el correo
   private String email;
 
   @Column(columnDefinition = "VARCHAR(125)", nullable = false)

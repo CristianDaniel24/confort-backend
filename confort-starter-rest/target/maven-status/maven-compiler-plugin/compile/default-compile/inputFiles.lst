@@ -1,5 +1,8 @@
 C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort-starter-rest\src\main\java\com\losconfort\confortstarterrest\AutoConfiguration.java
 C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort-starter-rest\src\main\java\com\losconfort\confortstarterrest\config\SecurityConfiguration.java
+C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort-starter-rest\src\main\java\com\losconfort\confortstarterrest\dto\ErrorResponseDTO.java
+C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort-starter-rest\src\main\java\com\losconfort\confortstarterrest\enums\ErrorCodeEnum.java
+C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort-starter-rest\src\main\java\com\losconfort\confortstarterrest\exception\DataBaseConstraintException.java
 C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort-starter-rest\src\main\java\com\losconfort\confortstarterrest\exception\ResourceNotFoundException.java
 C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort-starter-rest\src\main\java\com\losconfort\confortstarterrest\exception\UniqueConstraintViolationException.java
 C:\Users\crist\Documents\SENA\TAPICERIA CONFORT\confort-backend\confort-starter-rest\src\main\java\com\losconfort\confortstarterrest\helper\DefaultController.java
