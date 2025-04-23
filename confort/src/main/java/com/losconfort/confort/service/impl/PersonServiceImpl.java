@@ -30,7 +30,8 @@ public class PersonServiceImpl extends DefaultServiceImpl<PersonModel, Long, Per
     PersonModel personModel =
         this.repository
             .findByEmailAndPassword(loginRequest.getEmail(), loginRequest.getPassword())
-            .orElseThrow(() -> new ResourceNotFoundException("Email invalido o password invalida"));
+            .orElseThrow(
+                () -> new ResourceNotFoundException("Correo invalido o contraseña invalida"));
 
     boolean isEmployee = this.employeeService.existsByPerson(personModel);
     boolean isClient = this.clientService.existsByPerson(personModel);

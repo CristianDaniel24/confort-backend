@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ClientRepository extends DefaultRepository<ClientModel, Long> {
   boolean existsByPerson(PersonModel personModel);
+
+  boolean existsByPersonEmail(String email);
 }

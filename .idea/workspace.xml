@@ -5,31 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74dd7d81-6e33-4197-96d9-0bf59d0eea04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/auth/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/auth/AuthControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/dto/LoginRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/dto/LoginResponseDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort-starter-rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/classes/com/losconfort/confortstarterrest/config/advice/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/confort-starter-rest-0.1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/confort-starter-rest-0.1.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/confort-starter-rest-0.1.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort-starter-rest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/PersonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/model/PersonModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/PersonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/ClientServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/PersonModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/model/PersonModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/repository/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/repository/ClientRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/repository/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/repository/EmployeeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/repository/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/repository/PersonRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/ClientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/PersonService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/ClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/ClientServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/EmployeeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/PersonServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/PersonServiceImpl.class" afterDir="false" />
@@ -68,6 +59,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.confort [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.confort-starter-rest [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.confort-starter-rest [install].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
