@@ -37,6 +37,9 @@ public class ProductModel extends DefaultModel<Long> {
   @Column(name = "stock", columnDefinition = "BIGINT", nullable = false)
   private Long stock;
 
+  @Column(name = "img_url", columnDefinition = "VARCHAR(2000)")
+  private String imgUrl;
+
   @CreationTimestamp
   @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
   private Timestamp createdAt;
