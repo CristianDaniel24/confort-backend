@@ -1,5 +1,6 @@
 package com.losconfort.confort.model.cart;
 
+import com.losconfort.confort.enums.ShoppingCartEnum;
 import com.losconfort.confort.model.ClientModel;
 import com.losconfort.confortstarterrest.helper.DefaultModel;
 import jakarta.persistence.*;
@@ -25,6 +26,10 @@ public class ShoppingCartModel extends DefaultModel<Long> {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+
+  @Enumerated(EnumType.STRING)
+  @Column(name = "status")
+  private ShoppingCartEnum status;
 
   @OneToOne
   @JoinColumn(name = "client_id", columnDefinition = "BIGINT", nullable = false)

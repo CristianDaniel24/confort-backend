@@ -1,4 +1,4 @@
-package com.losconfort.confort.repository;
+package com.losconfort.confort.repository.cart;
 
 import com.losconfort.confort.model.cart.ShoppingCartServiceModel;
 import com.losconfort.confort.model.cart.ShoppingCartServicePK;

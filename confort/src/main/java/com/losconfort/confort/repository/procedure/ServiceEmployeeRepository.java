@@ -1,4 +1,4 @@
-package com.losconfort.confort.repository;
+package com.losconfort.confort.repository.procedure;
 
 import com.losconfort.confort.model.procedure.ServiceEmployeeModel;
 import com.losconfort.confort.model.procedure.ServiceEmployeePK;

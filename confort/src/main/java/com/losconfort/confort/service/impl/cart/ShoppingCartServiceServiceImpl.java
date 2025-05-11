@@ -4,7 +4,7 @@ import com.losconfort.confort.model.cart.ShoppingCartModel;
 import com.losconfort.confort.model.cart.ShoppingCartServiceModel;
 import com.losconfort.confort.model.cart.ShoppingCartServicePK;
 import com.losconfort.confort.model.procedure.ServiceModel;
-import com.losconfort.confort.repository.ShoppingCartServiceRepository;
+import com.losconfort.confort.repository.cart.ShoppingCartServiceRepository;
 import com.losconfort.confort.service.cart.ShoppingCartService;
 import com.losconfort.confort.service.cart.ShoppingCartServiceService;
 import com.losconfort.confort.service.procedure.ServiceService;

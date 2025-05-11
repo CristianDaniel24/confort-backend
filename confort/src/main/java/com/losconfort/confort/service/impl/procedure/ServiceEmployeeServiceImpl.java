@@ -4,13 +4,12 @@ import com.losconfort.confort.model.EmployeeModel;
 import com.losconfort.confort.model.procedure.ServiceEmployeeModel;
 import com.losconfort.confort.model.procedure.ServiceEmployeePK;
 import com.losconfort.confort.model.procedure.ServiceModel;
-import com.losconfort.confort.repository.ServiceEmployeeRepository;
+import com.losconfort.confort.repository.procedure.ServiceEmployeeRepository;
 import com.losconfort.confort.service.EmployeeService;
 import com.losconfort.confort.service.procedure.ServiceEmployeeService;
 import com.losconfort.confort.service.procedure.ServiceService;
 import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
