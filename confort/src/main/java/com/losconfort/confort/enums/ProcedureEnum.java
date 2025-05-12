@@ -1,7 +1,7 @@
 package com.losconfort.confort.enums;
 
 public enum ProcedureEnum {
-  STARTED,
-  DOING,
-  FINISHED
+  POR_EMPEZAR,
+  EN_CURSO,
+  TERMINADO
 }

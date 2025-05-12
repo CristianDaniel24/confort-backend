@@ -33,7 +33,7 @@ public class EmployeeModel extends DefaultModel<Long> {
   @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
   private Timestamp updatedAt;
 
-  @OneToOne
+  @OneToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "person_id", columnDefinition = "BIGINT", nullable = false)
   private PersonModel person;
 
