@@ -1,6 +1,5 @@
 package com.losconfort.confort.model.provider;
 
-import com.losconfort.confort.enums.TypeProductEnum;
 import com.losconfort.confortstarterrest.helper.DefaultModel;
 import jakarta.persistence.*;
 import java.io.Serial;
@@ -26,9 +25,8 @@ public class TypeProductModel extends DefaultModel<Long> {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Enumerated(EnumType.STRING)
-  @Column(name = "type", nullable = false)
-  private TypeProductEnum type;
+  @Column(name = "type", columnDefinition = "VARCHAR(50)", nullable = false)
+  private String type;
 
   @CreationTimestamp
   @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)

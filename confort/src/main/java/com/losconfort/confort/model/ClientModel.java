@@ -25,7 +25,7 @@ public class ClientModel extends DefaultModel<Long> {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @OneToOne
+  @OneToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "person_id", columnDefinition = "BIGINT", nullable = false)
   private PersonModel person;
 

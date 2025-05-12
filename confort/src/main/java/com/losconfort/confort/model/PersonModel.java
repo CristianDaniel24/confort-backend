@@ -41,14 +41,17 @@ public class PersonModel extends DefaultModel<Long> {
   @Column(columnDefinition = "VARCHAR(15)", nullable = false)
   private String document;
 
-  @Column(columnDefinition = "VARCHAR(150)", nullable = false)
-  private String email;
-
   @Column(columnDefinition = "VARCHAR(10)", nullable = false)
   private String phone;
 
   @Column(columnDefinition = "VARCHAR(150)", nullable = false)
   private String address;
+
+  @Column(columnDefinition = "VARCHAR(150)", nullable = false, unique = true)
+  private String email;
+
+  @Column(columnDefinition = "VARCHAR(125)", nullable = false)
+  private String password;
 
   @Column(columnDefinition = "DATE", nullable = false)
   private LocalDate dateOfBirth;

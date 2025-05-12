@@ -1,9 +1,11 @@
 package com.losconfort.confortstarterrest.helper;
 
+import com.losconfort.confortstarterrest.exception.DataBaseConstraintException;
 import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import jakarta.transaction.Transactional;
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 
 @AllArgsConstructor
 public abstract class DefaultServiceImpl<
@@ -41,8 +43,12 @@ public abstract class DefaultServiceImpl<
 
   @Override
   public M delete(I id) {
-    M model = this.repository.findById(id).orElseThrow(ResourceNotFoundException::new);
-    this.repository.delete(model);
-    return model;
+    try {
+      M model = this.repository.findById(id).orElseThrow(ResourceNotFoundException::new);
+      this.repository.delete(model);
+      return model;
+    } catch (DataIntegrityViolationException e) {
+      throw new DataBaseConstraintException();
+    }
   }
 }

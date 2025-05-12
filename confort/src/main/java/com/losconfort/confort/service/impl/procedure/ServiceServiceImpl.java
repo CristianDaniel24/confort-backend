@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class ServiceServiceImpl extends DefaultServiceImpl<ServiceModel, Long, ServiceRepository>
     implements ServiceService {
+
   public ServiceServiceImpl(ServiceRepository repository) {
     super(repository);
   }
+  
 }
