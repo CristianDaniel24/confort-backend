@@ -90,7 +90,6 @@ public class ShoppingCartProductServiceImpl
         repository
             .findById(pk)
             .orElseThrow(() -> new ShoppingCartException("El producto no esta en el carrito"));
-
     repository.deleteById(pk);
 
     return cartProduct;

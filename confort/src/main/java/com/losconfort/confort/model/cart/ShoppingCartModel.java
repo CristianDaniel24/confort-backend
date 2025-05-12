@@ -6,6 +6,7 @@ import com.losconfort.confortstarterrest.helper.DefaultModel;
 import jakarta.persistence.*;
 import java.io.Serial;
 import java.sql.Timestamp;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -30,6 +31,8 @@ public class ShoppingCartModel extends DefaultModel<Long> {
   @Enumerated(EnumType.STRING)
   @Column(name = "status")
   private ShoppingCartEnum status;
+
+  @Transient private List<ShoppingCartProductModel> shoppingCartProduct;
 
   @OneToOne
   @JoinColumn(name = "client_id", columnDefinition = "BIGINT", nullable = false)
