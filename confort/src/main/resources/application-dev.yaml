@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/confort?stringtype=unspecified
+    username: cristian
+    password: clancy242005
+    driverClassName: org.postgresql.Driver

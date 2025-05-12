@@ -6,7 +6,7 @@
 
     <groupId>com.losconfort</groupId>
     <artifactId>confort</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
@@ -14,4 +14,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.losconfort</groupId>
+            <artifactId>confort-starter-rest</artifactId>
+            <version>0.1.1-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
 </project>
