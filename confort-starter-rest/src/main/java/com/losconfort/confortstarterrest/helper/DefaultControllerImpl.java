@@ -17,13 +17,13 @@ public abstract class DefaultControllerImpl<
     return ResponseEntity.status(HttpStatus.OK).body(this.service.list());
   }
 
-  @Override
-  public ResponseEntity<M> create(M model) {
-    return ResponseEntity.status(HttpStatus.CREATED).body(this.service.create(model));
+  @OverrideCREATED).body(this.service.create(model));
   }
 
   @Override
-  public ResponseEntity<M> read(I id) {
+  public ResponseEntity<M
+public ResponseEntity<M> create(M model) {
+  return ResponseEntity.status(HttpStatus.> read(I id) {
     return ResponseEntity.status(HttpStatus.OK).body(this.service.read(id));
   }
 
