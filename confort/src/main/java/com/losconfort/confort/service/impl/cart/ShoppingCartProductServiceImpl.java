@@ -73,9 +73,11 @@ public class ShoppingCartProductServiceImpl
     return productService.read(productId);
   }
 
+  // Ahora este metodo permite obtener los productos solo del carrito activo
   @Override
   public List<ShoppingCartProductModel> findByClientId(Long clientId) {
-    return this.repository.findById_ShoppingCart_Client_Id(clientId);
+    ShoppingCartModel activeCart = this.shoppingCartService.getShoppingCartByPersonId(clientId);
+    return this.repository.findByShoppingCart_Id(activeCart.getId());
   }
 
   @Override

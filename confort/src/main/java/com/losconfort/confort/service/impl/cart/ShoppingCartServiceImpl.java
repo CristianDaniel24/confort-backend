@@ -37,6 +37,7 @@ public class ShoppingCartServiceImpl
 
     Optional<ShoppingCartModel> shoppingCart =
         this.repository.findActiveShoppingCartByPersonId(personId);
+
     if (shoppingCart.isPresent()) {
       return shoppingCart.get();
     } else {
@@ -59,17 +60,26 @@ public class ShoppingCartServiceImpl
         this.repository.findActiveShoppingCartByPersonId(personId);
 
     if (shoppingCart.isPresent()) {
-      shoppingCart.get().setStatus(ShoppingCartEnum.CONFIRMADO);
+      /*
+      shoppingCart
+          .get()
+          .setShoppingCartProduct(
+              this.shoppingCartProductRepository.findById_ShoppingCart_Client_Id(
+                  shoppingCart.get().getId()));
+       */
 
+      shoppingCart.get().setStatus(ShoppingCartEnum.CONFIRMADO);
       BillModel bill = new BillModel();
       bill.setDate(Timestamp.valueOf(LocalDateTime.now()));
       bill.setCostTotal(this.costTotal(shoppingCart.get()));
       bill.setShoppingCart(shoppingCart.get());
       this.bill.create(bill);
+
+      this.repository.save(shoppingCart.get());
     } else {
       throw new ShoppingCartException("Ocurrio un error con el carrito de compras!");
     }
-    return shoppingCart.get();
+    return this.getShoppingCartByPersonId(personId);
   }
 
   private Double costTotal(ShoppingCartModel shoppingCart) {
