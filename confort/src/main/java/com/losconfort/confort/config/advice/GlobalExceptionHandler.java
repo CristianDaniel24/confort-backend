@@ -41,4 +41,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             "Invalid payload", HttpStatus.BAD_REQUEST.value(), ErrorCodeEnum.INVALID_PAYLOAD);
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
   }
+
+  // Agregar el control del error del shoppingCartException
 }

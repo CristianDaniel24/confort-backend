@@ -7,4 +7,6 @@ public interface ShoppingCartService extends DefaultService<ShoppingCartModel, L
   ShoppingCartModel getShoppingCartByPersonId(Long personId);
 
   ShoppingCartModel confirmOrder(Long personId);
+
+  ShoppingCartModel getShoppingCart(Long personId);
 }

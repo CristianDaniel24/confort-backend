@@ -12,10 +12,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ShoppingCartProductRepository
     extends DefaultRepository<ShoppingCartProductModel, ShoppingCartProductPK> {
-  /*
-  List<ShoppingCartProductModel> findByShoppingCart_Client_Id(Long clientId);
-   */
-
+  
   List<ShoppingCartProductModel> findByShoppingCart_Id(Long shoppingCartId);
 
   @Modifying

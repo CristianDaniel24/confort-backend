@@ -23,13 +23,15 @@ public class ShoppingCartServiceImpl
     implements ShoppingCartService {
 
   private final ClientRepository clientRepository;
-  private final BillService bill;
+  private final BillService billService;
 
   public ShoppingCartServiceImpl(
-      ShoppingCartRepository repository, ClientRepository clientRepository, BillService bill) {
+      ShoppingCartRepository repository,
+      ClientRepository clientRepository,
+      BillService billService) {
     super(repository);
     this.clientRepository = clientRepository;
-    this.bill = bill;
+    this.billService = billService;
   }
 
   @Override
@@ -56,30 +58,19 @@ public class ShoppingCartServiceImpl
   @Override
   @Transactional
   public ShoppingCartModel confirmOrder(Long personId) {
-    Optional<ShoppingCartModel> shoppingCart =
-        this.repository.findActiveShoppingCartByPersonId(personId);
+    ShoppingCartModel shoppingCart =
+        this.repository
+            .findActiveShoppingCartByPersonId(personId)
+            .orElseThrow(
+                () -> new ShoppingCartException("Ocurrio un error con el carrito de compras!"));
 
-    if (shoppingCart.isPresent()) {
-      /*
-      shoppingCart
-          .get()
-          .setShoppingCartProduct(
-              this.shoppingCartProductRepository.findById_ShoppingCart_Client_Id(
-                  shoppingCart.get().getId()));
-       */
-
-      shoppingCart.get().setStatus(ShoppingCartEnum.CONFIRMADO);
-      BillModel bill = new BillModel();
-      bill.setDate(Timestamp.valueOf(LocalDateTime.now()));
-      bill.setCostTotal(this.costTotal(shoppingCart.get()));
-      bill.setShoppingCart(shoppingCart.get());
-      this.bill.create(bill);
-
-      this.repository.save(shoppingCart.get());
-    } else {
-      throw new ShoppingCartException("Ocurrio un error con el carrito de compras!");
-    }
-    return this.getShoppingCartByPersonId(personId);
+    shoppingCart.setStatus(ShoppingCartEnum.CONFIRMADO);
+    BillModel bill = new BillModel();
+    bill.setDate(Timestamp.valueOf(LocalDateTime.now()));
+    bill.setCostTotal(this.costTotal(shoppingCart));
+    bill.setShoppingCart(shoppingCart);
+    this.billService.create(bill);
+    return shoppingCart;
   }
 
   private Double costTotal(ShoppingCartModel shoppingCart) {
@@ -91,5 +82,12 @@ public class ShoppingCartServiceImpl
               return price * amount;
             })
         .sum();
+  }
+
+  @Override
+  public ShoppingCartModel getShoppingCart(Long personId) {
+    return this.repository
+        .findActiveShoppingCartByPersonId(personId)
+        .orElse(new ShoppingCartModel());
   }
 }

@@ -6,16 +6,52 @@
   <component name="ChangeListManager">
     <list default="true" id="a3bf60a7-7bd2-4ec6-898e-15d2dd6f6ca6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/config/advice/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/config/advice/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/cart/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/cart/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/cart/ShoppingCartControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/cart/ShoppingCartControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/payment/BillControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/payment/BillControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/payment/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/payment/BillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/cart/ShoppingCartProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/cart/ShoppingCartProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/payment/BillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/repository/payment/BillRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/cart/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/cart/ShoppingCartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/cart/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/cart/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/payment/BillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/payment/BillServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/payment/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/payment/BillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/controller/cart/ShoppingCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/controller/cart/ShoppingCartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/controller/impl/cart/ShoppingCartControllerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/controller/impl/cart/ShoppingCartControllerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/cart/ShoppingCartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/cart/ShoppingCartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/cart/ShoppingCartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/cart/ShoppingCartServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2x6UUtvH7RfiEWC0oK40OWPuHvc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "git-widget-placeholder": "develop"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/refactor",
+    "kotlin-language-version-configured": "true",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
   <component name="RunManager">
@@ -38,7 +74,15 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3bf60a7-7bd2-4ec6-898e-15d2dd6f6ca6" name="Changes" comment="" />
+      <created>1747258039662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747258039662</updated>
+    </task>
     <servers />
   </component>
 </project>
