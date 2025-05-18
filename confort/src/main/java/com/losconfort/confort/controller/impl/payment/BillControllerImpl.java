@@ -22,8 +22,20 @@ public class BillControllerImpl extends DefaultControllerImpl<BillModel, Long, B
   }
 
   @Override
-  @GetMapping(path = "client/{id}", produces = APPLICATION_JSON_VALUE)
+  @GetMapping(path = "/client/{id}", produces = APPLICATION_JSON_VALUE)
   public ResponseEntity<List<BillModel>> getBillByPersonId(@PathVariable("id") Long personId) {
     return ResponseEntity.ok(this.service.getBillByPersonId(personId));
+  }
+
+  @Override
+  @GetMapping(path = "/confirmOrder/{id}", produces = APPLICATION_JSON_VALUE)
+  public ResponseEntity<BillModel> confirmOrder(@PathVariable("id") Long orderId) {
+    return ResponseEntity.ok(this.service.confirmOrder(orderId));
+  }
+
+  @Override
+  @GetMapping(path = "/cancelOrder/{id}", produces = APPLICATION_JSON_VALUE)
+  public ResponseEntity<BillModel> cancelOrder(@PathVariable("id") Long orderId) {
+    return ResponseEntity.ok(this.service.cancelOrder(orderId));
   }
 }

@@ -85,6 +85,11 @@ public class ShoppingCartServiceImpl
   }
 
   @Override
+  public ShoppingCartModel getShoppingCartId(Long shoppingCartId) {
+    return this.repository.findById(shoppingCartId).orElse(new ShoppingCartModel());
+  }
+
+  @Override
   public ShoppingCartModel getShoppingCart(Long personId) {
     return this.repository
         .findActiveShoppingCartByPersonId(personId)

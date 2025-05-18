@@ -3,6 +3,7 @@ package com.losconfort.confort.config.advice;
 import com.losconfort.confortstarterrest.dto.ErrorResponseDTO;
 import com.losconfort.confortstarterrest.enums.ErrorCodeEnum;
 import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
+import com.losconfort.confortstarterrest.exception.ShoppingCartException;
 import com.losconfort.confortstarterrest.exception.UniqueConstraintViolationException;
 import org.hibernate.PropertyValueException;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -34,6 +35,14 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
   }
 
+  @ExceptionHandler(ShoppingCartException.class)
+  ResponseEntity<ErrorResponseDTO> handleShoppingCart(ShoppingCartException ex) {
+    ErrorResponseDTO error =
+        new ErrorResponseDTO(
+            ex.getMessage(), HttpStatus.BAD_REQUEST.value(), ErrorCodeEnum.SHOPPINGCART_ERROR);
+    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+  }
+
   @ExceptionHandler({PropertyValueException.class, DataIntegrityViolationException.class})
   ResponseEntity<ErrorResponseDTO> handlePropertyValueException(PropertyValueException ex) {
     ErrorResponseDTO error =
@@ -41,6 +50,4 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             "Invalid payload", HttpStatus.BAD_REQUEST.value(), ErrorCodeEnum.INVALID_PAYLOAD);
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
   }
-
-  // Agregar el control del error del shoppingCartException
 }

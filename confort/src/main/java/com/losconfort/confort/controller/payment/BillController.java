@@ -8,5 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 public interface BillController extends DefaultController<BillModel, Long> {
 
-    ResponseEntity<List<BillModel>> getBillByPersonId(@PathVariable("personId") Long personId);
+  ResponseEntity<List<BillModel>> getBillByPersonId(@PathVariable("personId") Long personId);
+
+  ResponseEntity<BillModel> confirmOrder(@PathVariable("personId") Long orderId);
+
+  ResponseEntity<BillModel> cancelOrder(@PathVariable("personId") Long orderId);
 }
