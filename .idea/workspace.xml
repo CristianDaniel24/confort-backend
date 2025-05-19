@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3bf60a7-7bd2-4ec6-898e-15d2dd6f6ca6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/enums/ErrorCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort-starter-rest/src/main/java/com/losconfort/confortstarterrest/enums/ErrorCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/config/advice/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/config/advice/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/payment/BillControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/impl/payment/BillControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/payment/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/controller/payment/BillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/enums/ShoppingCartEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/enums/ShoppingCartEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/cart/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/cart/ShoppingCartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/cart/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/cart/ShoppingCartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/payment/BillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/impl/payment/BillServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/payment/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/service/payment/BillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/config/advice/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/config/advice/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/controller/impl/payment/BillControllerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/controller/impl/payment/BillControllerImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
