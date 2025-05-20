@@ -32,7 +32,7 @@ public class CarModel extends DefaultModel<Long> {
   @Column(name = "plate", columnDefinition = "VARCHAR(150)", nullable = false)
   private String plate;
 
-  @OneToOne
+  @ManyToOne
   @JoinColumn(name = "type_car", columnDefinition = "BIGINT", nullable = false)
   private TypeCarModel typeCar;
 

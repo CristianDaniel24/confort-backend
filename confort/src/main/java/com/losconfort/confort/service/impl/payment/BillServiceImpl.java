@@ -2,8 +2,10 @@ package com.losconfort.confort.service.impl.payment;
 
 import com.losconfort.confort.enums.ShoppingCartEnum;
 import com.losconfort.confort.model.payment.BillModel;
+import com.losconfort.confort.model.payment.PaymentModel;
 import com.losconfort.confort.repository.payment.BillRepository;
 import com.losconfort.confort.service.payment.BillService;
+import com.losconfort.confort.service.payment.PaymentService;
 import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
 import java.util.List;
@@ -13,8 +15,11 @@ import org.springframework.stereotype.Service;
 public class BillServiceImpl extends DefaultServiceImpl<BillModel, Long, BillRepository>
     implements BillService {
 
-  public BillServiceImpl(BillRepository repository) {
+  private final PaymentService paymentService;
+
+  public BillServiceImpl(BillRepository repository, PaymentService paymentService) {
     super(repository);
+    this.paymentService = paymentService;
   }
 
   @Override
@@ -23,24 +28,26 @@ public class BillServiceImpl extends DefaultServiceImpl<BillModel, Long, BillRep
   }
 
   @Override
-  public BillModel confirmOrder(Long orderId) {
+  public BillModel confirmOrder(Long billId, PaymentModel payment) {
     BillModel bill =
         this.repository
-            .findById(orderId)
+            .findById(billId)
             .orElseThrow(
                 () ->
                     new ResourceNotFoundException(
                         "Ocurrio un error al intentar encontrar el pedido"));
 
     bill.getShoppingCart().setStatus(ShoppingCartEnum.PAGADO);
+    payment.setBill(bill);
+    this.paymentService.create(payment);
     return this.repository.save(bill);
   }
 
   @Override
-  public BillModel cancelOrder(Long orderId) {
+  public BillModel cancelOrder(Long billId) {
     BillModel bill =
         this.repository
-            .findById(orderId)
+            .findById(billId)
             .orElseThrow(
                 () ->
                     new ResourceNotFoundException(
