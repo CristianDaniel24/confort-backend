@@ -8,6 +8,6 @@ spring:
         format-sql: true
   datasource:
     url: jdbc:postgresql://localhost:5432/confort?stringtype=unspecified
-    username: cristian
-    password: clancy242005
+    username: postgres
+    password: 12345
     driverClassName: org.postgresql.Driver
