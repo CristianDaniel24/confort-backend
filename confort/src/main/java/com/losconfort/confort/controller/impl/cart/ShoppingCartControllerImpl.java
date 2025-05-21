@@ -5,6 +5,7 @@ import com.losconfort.confort.model.cart.ShoppingCartModel;
 import com.losconfort.confort.service.cart.ShoppingCartService;
 import com.losconfort.confortstarterrest.helper.DefaultControllerImpl;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,7 @@ public class ShoppingCartControllerImpl
   }
 
   @Override
-  public ResponseEntity<ShoppingCartModel> confirmOrder(Long personId) {
+  public ResponseEntity<ShoppingCartModel> confirmOrder(@PathVariable("clientId") Long personId) {
     return ResponseEntity.ok(this.service.confirmOrder(personId));
   }
 }

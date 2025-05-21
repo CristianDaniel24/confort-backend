@@ -1,5 +1,8 @@
 package com.losconfort.confort.model.cart;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.losconfort.confort.enums.ShoppingCartEnum;
 import com.losconfort.confort.model.ClientModel;
 import com.losconfort.confortstarterrest.helper.DefaultModel;
@@ -20,6 +23,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @AllArgsConstructor
 @Table(name = "shopping_cart")
 @EqualsAndHashCode(callSuper = false)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class ShoppingCartModel extends DefaultModel<Long> {
 
   @Serial private static final long serialVersionUID = 5609967024250340655L;
@@ -32,9 +36,11 @@ public class ShoppingCartModel extends DefaultModel<Long> {
   @Column(name = "status")
   private ShoppingCartEnum status;
 
-  @Transient private List<ShoppingCartProductModel> shoppingCartProduct;
+  @JsonManagedReference
+  @OneToMany(mappedBy = "shoppingCart", cascade = CascadeType.ALL, orphanRemoval = true)
+  private List<ShoppingCartProductModel> shoppingCartProduct;
 
-  @OneToOne
+  @ManyToOne
   @JoinColumn(name = "client_id", columnDefinition = "BIGINT", nullable = false)
   private ClientModel client;
 

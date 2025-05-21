@@ -37,6 +37,9 @@ public class ServiceModel extends DefaultModel<Long> {
   @Column(name = "description", columnDefinition = "VARCHAR(250)", nullable = false)
   private String description;
 
+  @Column(name = "img_url", columnDefinition = "VARCHAR(2000)")
+  private String imgUrl;
+
   @Column(name = "due_to", columnDefinition = "TIMESTAMP", nullable = false)
   private Timestamp dueTo;
 
