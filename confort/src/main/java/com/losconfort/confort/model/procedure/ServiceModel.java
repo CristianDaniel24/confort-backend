@@ -24,34 +24,25 @@ public class ServiceModel extends DefaultModel<Long> {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "name", columnDefinition = "VARCHAR(150)", nullable = false)
-  private String name;
-
-  @Column(name = "price", columnDefinition = "DECIMAL(10,2)", nullable = false)
-  private Double price;
-
   @Enumerated(EnumType.STRING)
-  @Column(name = "status", nullable = false)
+  @Column(name = "status")
   private ServiceEnum status;
 
-  @Column(name = "description", columnDefinition = "VARCHAR(250)", nullable = false)
+  @Column(name = "description", columnDefinition = "VARCHAR(250)")
   private String description;
 
-  @Column(name = "img_url", columnDefinition = "VARCHAR(2000)")
-  private String imgUrl;
-
-  @Column(name = "due_to", columnDefinition = "TIMESTAMP", nullable = false)
+  @Column(name = "due_to", columnDefinition = "TIMESTAMP")
   private Timestamp dueTo;
 
-  @Column(name = "completed_at", columnDefinition = "TIMESTAMP", nullable = false)
+  @Column(name = "completed_at", columnDefinition = "TIMESTAMP")
   private Timestamp completedAt;
 
   @ManyToOne
-  @JoinColumn(name = "car_id", columnDefinition = "BIGINT", nullable = false)
+  @JoinColumn(name = "car_id", columnDefinition = "BIGINT")
   private CarModel car;
 
   @ManyToOne
-  @JoinColumn(name = "procedure_id", columnDefinition = "BIGINT", nullable = false)
+  @JoinColumn(name = "procedure_id", columnDefinition = "BIGINT")
   private ProcedureModel procedure;
 
   @CreationTimestamp
