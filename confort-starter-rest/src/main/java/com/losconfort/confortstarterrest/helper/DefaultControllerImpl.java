@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 @AllArgsConstructor
 public abstract class DefaultControllerImpl<
         M extends DefaultModel<I>, I extends Serializable, S extends DefaultService<M, I>>
-    implements DefaultController<M, I> {
+        implements DefaultController<M, I> {
 
   protected final S service;
 
@@ -17,13 +17,13 @@ public abstract class DefaultControllerImpl<
     return ResponseEntity.status(HttpStatus.OK).body(this.service.list());
   }
 
-  @OverrideCREATED).body(this.service.create(model));
+  @Override
+  public ResponseEntity<M> create(M model) {
+    return ResponseEntity.status(HttpStatus.CREATED).body(this.service.create(model));
   }
 
   @Override
-  public ResponseEntity<M
-public ResponseEntity<M> create(M model) {
-  return ResponseEntity.status(HttpStatus.> read(I id) {
+  public ResponseEntity<M> read(I id) {
     return ResponseEntity.status(HttpStatus.OK).body(this.service.read(id));
   }
 

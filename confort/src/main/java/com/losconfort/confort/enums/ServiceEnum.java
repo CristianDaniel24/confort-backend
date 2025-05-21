@@ -1,6 +1,7 @@
 package com.losconfort.confort.enums;
 
 public enum ServiceEnum {
-  ACTIVO,
-  INACTIVO
+  CREADO,
+  APROBADO,
+  RECHAZADO
 }
