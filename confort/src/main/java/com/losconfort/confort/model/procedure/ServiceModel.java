@@ -38,11 +38,20 @@ public class ServiceModel extends DefaultModel<Long> {
   private Timestamp completedAt;
 
   @ManyToOne
-  @JoinColumn(name = "car_id", columnDefinition = "BIGINT")
+  @JoinColumn(
+      name = "car_id",
+      referencedColumnName = "id",
+      columnDefinition = "BIGINT",
+      nullable = false,
+      updatable = false)
   private CarModel car;
 
   @ManyToOne
-  @JoinColumn(name = "procedure_id", columnDefinition = "BIGINT")
+  @JoinColumn(
+      name = "procedure_id",
+      columnDefinition = "BIGINT",
+      nullable = false,
+      updatable = false)
   private ProcedureModel procedure;
 
   @CreationTimestamp

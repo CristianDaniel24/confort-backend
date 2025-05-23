@@ -4,15 +4,20 @@ import com.losconfort.confort.model.ClientModel;
 import com.losconfort.confort.model.PersonModel;
 import com.losconfort.confort.repository.ClientRepository;
 import com.losconfort.confort.service.ClientService;
+import com.losconfort.confort.service.PersonService;
 import com.losconfort.confortstarterrest.exception.UniqueConstraintViolationException;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ClientServiceImpl extends DefaultServiceImpl<ClientModel, Long, ClientRepository>
     implements ClientService {
-  public ClientServiceImpl(ClientRepository repository) {
+  private final PersonService personService;
+
+  public ClientServiceImpl(ClientRepository repository, @Lazy PersonService personService) {
     super(repository);
+    this.personService = personService;
   }
 
   @Override
@@ -28,5 +33,11 @@ public class ClientServiceImpl extends DefaultServiceImpl<ClientModel, Long, Cli
   @Override
   public boolean existsByPerson(PersonModel personModel) {
     return this.repository.existsByPerson(personModel);
+  }
+
+  @Override
+  public ClientModel update(Long id, ClientModel model) {
+    model.setPerson(this.personService.update(id, model.getPerson()));
+    return model;
   }
 }

@@ -6,4 +6,6 @@ import com.losconfort.confortstarterrest.helper.DefaultService;
 
 public interface EmployeeService extends DefaultService<EmployeeModel, Long> {
   boolean existsByPerson(PersonModel personModel);
+
+  EmployeeModel findByPersonId(Long personId);
 }

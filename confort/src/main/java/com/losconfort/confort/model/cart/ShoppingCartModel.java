@@ -40,6 +40,10 @@ public class ShoppingCartModel extends DefaultModel<Long> {
   @OneToMany(mappedBy = "shoppingCart", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<ShoppingCartProductModel> shoppingCartProduct;
 
+  @JsonManagedReference
+  @OneToMany(mappedBy = "shoppingCart", cascade = CascadeType.ALL, orphanRemoval = true)
+  private List<ShoppingCartServiceModel> shoppingCartServices;
+
   @ManyToOne
   @JoinColumn(name = "client_id", columnDefinition = "BIGINT", nullable = false)
   private ClientModel client;

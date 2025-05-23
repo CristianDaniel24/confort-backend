@@ -38,7 +38,7 @@ public class PersonModel extends DefaultModel<Long> {
   @Column(columnDefinition = "VARCHAR(123)")
   private String secondLastName;
 
-  @Column(columnDefinition = "VARCHAR(15)", nullable = false)
+  @Column(columnDefinition = "VARCHAR(15)", nullable = false, updatable = false)
   private String document;
 
   @Column(columnDefinition = "VARCHAR(10)", nullable = false)
@@ -47,7 +47,7 @@ public class PersonModel extends DefaultModel<Long> {
   @Column(columnDefinition = "VARCHAR(150)", nullable = false)
   private String address;
 
-  @Column(columnDefinition = "VARCHAR(150)", nullable = false, unique = true)
+  @Column(columnDefinition = "VARCHAR(150)", nullable = false, unique = true, updatable = false)
   private String email;
 
   @Column(columnDefinition = "VARCHAR(125)", nullable = false)

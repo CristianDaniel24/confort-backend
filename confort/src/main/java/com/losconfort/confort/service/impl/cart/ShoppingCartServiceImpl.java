@@ -74,14 +74,27 @@ public class ShoppingCartServiceImpl
   }
 
   private Double costTotal(ShoppingCartModel shoppingCart) {
-    return shoppingCart.getShoppingCartProduct().stream()
-        .mapToDouble(
-            item -> {
-              Double price = item.getId().getProduct().getCost();
-              Integer amount = item.getAmount();
-              return price * amount;
-            })
-        .sum();
+    double productsTotal =
+        shoppingCart.getShoppingCartProduct().stream()
+            .mapToDouble(
+                item -> {
+                  Double price = item.getId().getProduct().getCost();
+                  Integer amount = item.getAmount();
+                  return price * (amount != null ? amount : 0);
+                })
+            .sum();
+
+    double servicesTotal =
+        shoppingCart.getShoppingCartServices().stream()
+            .mapToDouble(
+                item -> {
+                  Double servicePrice = item.getService().getProcedure().getPrice();
+                  Integer serviceAmount = item.getAmount();
+                  return servicePrice * (serviceAmount != null ? serviceAmount : 0);
+                })
+            .sum();
+
+    return productsTotal + servicesTotal;
   }
 
   @Override

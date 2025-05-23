@@ -35,13 +35,13 @@ public class ShoppingCartProductServiceImpl
 
   @Override
   @Transactional
-  public ShoppingCartProductModel create(ShoppingCartProductModel shoppingCartProduct) {
+  public ShoppingCartProductModel create(ShoppingCartProductModel model) {
 
     ShoppingCartModel shoppingCart =
         this.shoppingCartService.getShoppingCartByPersonId(
-            shoppingCartProduct.getId().getShoppingCart().getClient().getPerson().getId());
+            model.getId().getShoppingCart().getClient().getPerson().getId());
 
-    ProductModel product = getProduct(shoppingCartProduct);
+    ProductModel product = getProduct(model);
 
     if (product.getStock() == null || product.getStock() <= 0) {
       throw new ShoppingCartException(
@@ -57,9 +57,9 @@ public class ShoppingCartProductServiceImpl
       return repository.save(existingItem);
     }
 
-    shoppingCartProduct.setId(pk);
-    shoppingCartProduct.setAmount(1);
-    return repository.save(shoppingCartProduct);
+    model.setId(pk);
+    model.setAmount(1);
+    return repository.save(model);
   }
 
   private ProductModel getProduct(ShoppingCartProductModel model) {

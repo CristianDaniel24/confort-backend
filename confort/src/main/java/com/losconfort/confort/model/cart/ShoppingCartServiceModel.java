@@ -38,6 +38,9 @@ public class ShoppingCartServiceModel extends DefaultModel<ShoppingCartServicePK
   @JoinColumn(name = "service_id", columnDefinition = "BIGINT", nullable = false)
   private ServiceModel service;
 
+  @Column(nullable = false, columnDefinition = "integer default 1")
+  private Integer amount = 1;
+
   @CreationTimestamp
   @Column(name = "created_at", columnDefinition = "TIMESTAMP", nullable = false, updatable = false)
   private Timestamp createdAt;

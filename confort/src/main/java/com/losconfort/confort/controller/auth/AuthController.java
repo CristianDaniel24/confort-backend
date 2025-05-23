@@ -7,4 +7,8 @@ import org.springframework.http.ResponseEntity;
 public interface AuthController {
 
   ResponseEntity<LoginResponseDTO> signin(LoginRequestDTO loginRequest);
+
+  /*
+  ResponseEntity<LoginResponseDTO> recoverPassword(Se recibe el nuevo modelo);
+  */
 }
