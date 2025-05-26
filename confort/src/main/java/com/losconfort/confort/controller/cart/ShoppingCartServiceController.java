@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface ShoppingCartServiceController
     extends DefaultController<ShoppingCartServiceModel, ShoppingCartServicePK> {
 
-  ResponseEntity<Iterable<ShoppingCartServiceModel>> shoppingCartProducts(
-      @PathVariable Long clientId);
+  ResponseEntity<Iterable<ShoppingCartServiceModel>> shoppingCartProducts(Long clientId);
 
-  ResponseEntity<ShoppingCartServiceModel> delete(
-      @PathVariable("clientId") Long clientId, @PathVariable("productId") Long serviceId);
+  ResponseEntity<ShoppingCartServiceModel> delete(Long clientId, Long serviceId);
 }

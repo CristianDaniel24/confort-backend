@@ -5,4 +5,6 @@ import com.losconfort.confortstarterrest.helper.DefaultService;
 
 public interface ProductService extends DefaultService<ProductModel, Long> {
   ProductModel findById(Long id);
+
+  void updateStock(Long productId, Long newStock);
 }

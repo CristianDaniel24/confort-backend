@@ -8,6 +8,7 @@ import com.losconfort.confort.repository.ClientRepository;
 import com.losconfort.confort.repository.cart.ShoppingCartRepository;
 import com.losconfort.confort.service.cart.ShoppingCartService;
 import com.losconfort.confort.service.payment.BillService;
+import com.losconfort.confort.service.provider.ProductService;
 import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import com.losconfort.confortstarterrest.exception.ShoppingCartException;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
@@ -23,14 +24,17 @@ public class ShoppingCartServiceImpl
     implements ShoppingCartService {
 
   private final ClientRepository clientRepository;
+  private final ProductService productService;
   private final BillService billService;
 
   public ShoppingCartServiceImpl(
       ShoppingCartRepository repository,
       ClientRepository clientRepository,
+      ProductService productService,
       BillService billService) {
     super(repository);
     this.clientRepository = clientRepository;
+    this.productService = productService;
     this.billService = billService;
   }
 
@@ -64,12 +68,53 @@ public class ShoppingCartServiceImpl
             .orElseThrow(
                 () -> new ShoppingCartException("Ocurrio un error con el carrito de compras!"));
 
+    // Validacion del Stock
+    shoppingCart
+        .getShoppingCartProduct()
+        .forEach(
+            item -> {
+              var product = item.getId().getProduct();
+              var cantidadComprada = item.getAmount();
+
+              if (cantidadComprada == null || cantidadComprada <= 0) {
+                throw new ShoppingCartException(
+                    "La cantidad del producto " + product.getName() + " no es válida.");
+              }
+
+              if (product.getStock() < cantidadComprada) {
+                throw new ShoppingCartException(
+                    "No hay suficiente stock para el producto: "
+                        + product.getName()
+                        + ". Disponible: "
+                        + product.getStock()
+                        + ", requerido: "
+                        + cantidadComprada);
+              }
+            });
+
+    // Descuento del stock
+    shoppingCart
+        .getShoppingCartProduct()
+        .forEach(
+            item -> {
+              var product = item.getId().getProduct();
+              var quantityPurchased = item.getAmount();
+              Long newStock = product.getStock() - quantityPurchased;
+              product.setStock(newStock);
+              this.productService.updateStock(product.getId(), newStock);
+            });
+
+    // Actualizar y guardar el carrito
     shoppingCart.setStatus(ShoppingCartEnum.CONFIRMADO);
+    shoppingCart = this.repository.save(shoppingCart);
+
+    // Creacion de la factura
     BillModel bill = new BillModel();
     bill.setDate(Timestamp.valueOf(LocalDateTime.now()));
     bill.setCostTotal(this.costTotal(shoppingCart));
     bill.setShoppingCart(shoppingCart);
     this.billService.create(bill);
+
     return shoppingCart;
   }
 

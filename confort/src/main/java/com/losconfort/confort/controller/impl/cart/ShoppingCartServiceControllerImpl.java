@@ -30,7 +30,7 @@ public class ShoppingCartServiceControllerImpl
   @Override
   @DeleteMapping(path = "/client/{clientId}/service/{serviceId}")
   public ResponseEntity<ShoppingCartServiceModel> delete(
-      @PathVariable("id") Long clientId, Long serviceId) {
+      @PathVariable("clientId") Long clientId, @PathVariable("serviceId") Long serviceId) {
     var shoppingCartProduct = this.service.delete(clientId, serviceId);
     return ResponseEntity.ok(shoppingCartProduct);
   }

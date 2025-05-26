@@ -1,8 +1,10 @@
 package com.losconfort.confort.controller.impl.auth;
 
 import com.losconfort.confort.controller.auth.AuthController;
+import com.losconfort.confort.dto.ChangePasswordDTO;
 import com.losconfort.confort.dto.LoginRequestDTO;
 import com.losconfort.confort.dto.LoginResponseDTO;
+import com.losconfort.confort.dto.UserEmailDTO;
 import com.losconfort.confort.service.PersonService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -24,5 +26,17 @@ public class AuthControllerImpl implements AuthController {
   @PostMapping("/signin")
   public ResponseEntity<LoginResponseDTO> signin(@Valid @RequestBody LoginRequestDTO loginRequest) {
     return ResponseEntity.status(HttpStatus.OK).body(this.authService.signin(loginRequest));
+  }
+
+  @Override
+  @PostMapping("/email")
+  public ResponseEntity<UserEmailDTO> recoverPassword(@RequestBody UserEmailDTO model) {
+    return ResponseEntity.ok(this.authService.recoverPassword(model));
+  }
+
+  @Override
+  @PostMapping("/newPassword")
+  public ResponseEntity<ChangePasswordDTO> changePassword(@RequestBody ChangePasswordDTO model) {
+    return ResponseEntity.ok(this.authService.changePassword(model));
   }
 }
