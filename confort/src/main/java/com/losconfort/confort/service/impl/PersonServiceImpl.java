@@ -17,6 +17,7 @@ import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.UUID;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 
@@ -27,25 +28,33 @@ public class PersonServiceImpl extends DefaultServiceImpl<PersonModel, Long, Per
   private final EmployeeService employeeService;
   private final ClientService clientService;
   private final RecoveryPasswordService recoveryPasswordService;
+  private final PasswordEncoder passwordEncoder;
 
   public PersonServiceImpl(
       PersonRepository repository,
       EmployeeService employeeService,
       ClientService clientService,
-      RecoveryPasswordService recoveryPassword) {
+      RecoveryPasswordService recoveryPasswordService,
+      PasswordEncoder passwordEncoder) {
     super(repository);
     this.employeeService = employeeService;
     this.clientService = clientService;
-    this.recoveryPasswordService = recoveryPassword;
+    this.recoveryPasswordService = recoveryPasswordService;
+    this.passwordEncoder = passwordEncoder;
   }
 
   @Override
   public LoginResponseDTO signin(LoginRequestDTO loginRequest) {
     PersonModel personModel =
         this.repository
-            .findByEmailAndPassword(loginRequest.getEmail(), loginRequest.getPassword())
+            .findByEmail(loginRequest.getEmail())
             .orElseThrow(
                 () -> new ResourceNotFoundException("Correo invalido o contraseña invalida"));
+
+    // Comparar la contraseña usando BCrypt
+    if (!passwordEncoder.matches(loginRequest.getPassword(), personModel.getPassword())) {
+      throw new ResourceNotFoundException("Correo invalido o contraseña invalida");
+    }
 
     boolean isEmployee = this.employeeService.existsByPerson(personModel);
     boolean isClient = this.clientService.existsByPerson(personModel);
@@ -110,7 +119,8 @@ public class PersonServiceImpl extends DefaultServiceImpl<PersonModel, Long, Per
     }
 
     PersonModel person = recovery.getPerson();
-    person.setPassword(model.getPassword());
+    String hashedPassword = passwordEncoder.encode(model.getPassword());
+    person.setPassword(hashedPassword);
     this.repository.save(person);
 
     recovery.setStatus(RecoveryPasswordEnum.USED);

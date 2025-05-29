@@ -11,4 +11,8 @@ public interface BillService extends DefaultService<BillModel, Long> {
   BillModel confirmOrder(Long billId, PaymentModel payment);
 
   BillModel cancelOrder(Long billId);
+
+  Double totalSumMonth();
+
+  BillModel billPaid();
 }

@@ -53,12 +53,24 @@ public class ShoppingCartProductServiceImpl
 
     if (existing.isPresent()) {
       ShoppingCartProductModel existingItem = existing.get();
-      existingItem.setAmount(existingItem.getAmount() + 1);
+
+      int newAmount = existingItem.getAmount() + 1;
+
+      if (newAmount > product.getStock()) {
+        throw new ShoppingCartException("No hay cantidad suficiente para este producto!");
+      }
+
+      existingItem.setAmount(newAmount);
       return repository.save(existingItem);
     }
 
     model.setId(pk);
     model.setAmount(1);
+
+    if (model.getAmount() > product.getStock()) {
+      throw new ShoppingCartException("La cantidad solicitada supera la cantidad disponible!");
+    }
+
     return repository.save(model);
   }
 
@@ -73,7 +85,6 @@ public class ShoppingCartProductServiceImpl
     return productService.read(productId);
   }
 
-  // Ahora este metodo permite obtener los productos solo del carrito activo
   @Override
   public List<ShoppingCartProductModel> findByClientId(Long clientId) {
     ShoppingCartModel activeCart = this.shoppingCartService.getShoppingCartByPersonId(clientId);

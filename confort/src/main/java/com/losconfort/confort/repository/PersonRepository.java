@@ -8,7 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PersonRepository extends DefaultRepository<PersonModel, Long> {
 
-  Optional<PersonModel> findByEmailAndPassword(String email, String password);
-
   Optional<PersonModel> findByEmail(String email);
 }

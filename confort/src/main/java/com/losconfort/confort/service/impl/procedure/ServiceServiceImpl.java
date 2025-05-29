@@ -72,4 +72,14 @@ public class ServiceServiceImpl extends DefaultServiceImpl<ServiceModel, Long, S
         .orElseThrow(
             () -> new ResourceNotFoundException("Servicio con id " + id + " no encontrado"));
   }
+
+  @Override
+  public Long pendingOrders() {
+    return this.repository.countCreatedServices(ServiceEnum.CREADO);
+  }
+
+  @Override
+  public ServiceModel newService() {
+    return this.repository.findTopByStatusOrderByCreatedAtDesc(ServiceEnum.CREADO);
+  }
 }

@@ -9,16 +9,22 @@ import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import com.losconfort.confortstarterrest.exception.UniqueConstraintViolationException;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeServiceImpl extends DefaultServiceImpl<EmployeeModel, Long, EmployeeRepository>
     implements EmployeeService {
   private final PersonService personService;
+  private final PasswordEncoder passwordEncoder;
 
-  public EmployeeServiceImpl(EmployeeRepository repository, @Lazy PersonService personService) {
+  public EmployeeServiceImpl(
+      EmployeeRepository repository,
+      @Lazy PersonService personService,
+      PasswordEncoder passwordEncoder) {
     super(repository);
     this.personService = personService;
+    this.passwordEncoder = passwordEncoder;
   }
 
   @Override
@@ -28,6 +34,8 @@ public class EmployeeServiceImpl extends DefaultServiceImpl<EmployeeModel, Long,
     if (this.repository.existsByPersonEmail(email)) {
       throw new UniqueConstraintViolationException("El correo " + email + " ya esta registrado.");
     }
+    String hashedPassword = passwordEncoder.encode(model.getPerson().getPassword());
+    model.getPerson().setPassword(hashedPassword);
     return super.create(model);
   }
 
@@ -45,6 +53,13 @@ public class EmployeeServiceImpl extends DefaultServiceImpl<EmployeeModel, Long,
 
   @Override
   public EmployeeModel update(Long id, EmployeeModel model) {
+    String currentPassword =
+        this.repository
+            .findPasswordByPersonId(id)
+            .orElseThrow(
+                () -> new ResourceNotFoundException("Hubo un error al intentar editar tu cuenta"));
+
+    model.getPerson().setPassword(currentPassword);
     model.setPerson(this.personService.update(id, model.getPerson()));
     return model;
   }

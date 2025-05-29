@@ -31,4 +31,14 @@ public class ProductServiceImpl extends DefaultServiceImpl<ProductModel, Long, P
     product.setStock(newStock);
     this.repository.save(product);
   }
+
+  @Override
+  public Long productsStock() {
+    return this.repository.getTotalStock();
+  }
+
+  @Override
+  public ProductModel lowStock() {
+    return this.repository.findFirstByStockGreaterThanOrderByStockAsc(0L);
+  }
 }

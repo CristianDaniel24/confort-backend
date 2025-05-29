@@ -7,4 +7,8 @@ public interface ProductService extends DefaultService<ProductModel, Long> {
   ProductModel findById(Long id);
 
   void updateStock(Long productId, Long newStock);
+
+  Long productsStock();
+
+  ProductModel lowStock();
 }

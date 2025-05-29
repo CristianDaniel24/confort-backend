@@ -8,6 +8,8 @@ import com.losconfort.confort.service.payment.BillService;
 import com.losconfort.confort.service.payment.PaymentService;
 import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
+import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -55,5 +57,17 @@ public class BillServiceImpl extends DefaultServiceImpl<BillModel, Long, BillRep
 
     bill.getShoppingCart().setStatus(ShoppingCartEnum.CANCELADO);
     return this.repository.save(bill);
+  }
+
+  @Override
+  public Double totalSumMonth() {
+    LocalDate firstDayOfLastMonth = LocalDate.now().minusMonths(1).withDayOfMonth(1);
+    Timestamp startDate = Timestamp.valueOf(firstDayOfLastMonth.atStartOfDay());
+    return this.repository.sumPaidBillsFromLastMonth(ShoppingCartEnum.PAGADO, startDate);
+  }
+
+  @Override
+  public BillModel billPaid() {
+    return this.repository.findFirstByShoppingCart_StatusOrderByDateDesc(ShoppingCartEnum.PAGADO);
   }
 }
