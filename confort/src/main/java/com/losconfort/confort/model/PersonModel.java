@@ -53,7 +53,7 @@ public class PersonModel extends DefaultModel<Long> {
   @Column(columnDefinition = "VARCHAR(125)", nullable = false)
   private String password;
 
-  @Column(columnDefinition = "DATE", nullable = false)
+  @Column(columnDefinition = "DATE")
   private LocalDate dateOfBirth;
 
   @CreationTimestamp

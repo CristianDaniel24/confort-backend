@@ -10,4 +10,6 @@ public interface ClientService extends DefaultService<ClientModel, Long> {
   Long totalClients();
 
   ClientModel newClient();
+
+  ClientModel findPersonId(Long personId);
 }

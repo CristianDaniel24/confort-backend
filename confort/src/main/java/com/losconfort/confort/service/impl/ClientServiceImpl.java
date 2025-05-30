@@ -5,6 +5,7 @@ import com.losconfort.confort.model.PersonModel;
 import com.losconfort.confort.repository.ClientRepository;
 import com.losconfort.confort.service.ClientService;
 import com.losconfort.confort.service.PersonService;
+import com.losconfort.confortstarterrest.exception.ResourceNotFoundException;
 import com.losconfort.confortstarterrest.exception.UniqueConstraintViolationException;
 import com.losconfort.confortstarterrest.helper.DefaultServiceImpl;
 import org.springframework.context.annotation.Lazy;
@@ -61,5 +62,12 @@ public class ClientServiceImpl extends DefaultServiceImpl<ClientModel, Long, Cli
   @Override
   public ClientModel newClient() {
     return this.repository.findFirstByOrderByCreatedAtDesc();
+  }
+
+  @Override
+  public ClientModel findPersonId(Long personId) {
+    return this.repository
+        .findByPersonId(personId)
+        .orElseThrow(() -> new ResourceNotFoundException("No se encontro el person"));
   }
 }
