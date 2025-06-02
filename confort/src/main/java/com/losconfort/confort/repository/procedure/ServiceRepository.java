@@ -21,6 +21,8 @@ public interface ServiceRepository extends DefaultRepository<ServiceModel, Long>
   @Query("SELECT COUNT(s) FROM ServiceModel s WHERE s.status = :status")
   Long countCreatedServices(@Param("status") ServiceEnum status);
 
-  @Query("SELECT s FROM ServiceModel s WHERE s.status = :status ORDER BY s.createdAt DESC")
-  ServiceModel findTopByStatusOrderByCreatedAtDesc(@Param("status") ServiceEnum status);
+  @Query(
+      value = "SELECT * FROM service WHERE status = :status ORDER BY created_at DESC LIMIT 1",
+      nativeQuery = true)
+  ServiceModel findTopByStatusOrderByCreatedAtDesc(@Param("status") String status);
 }

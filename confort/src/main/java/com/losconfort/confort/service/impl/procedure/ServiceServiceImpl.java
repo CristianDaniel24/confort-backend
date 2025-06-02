@@ -80,6 +80,6 @@ public class ServiceServiceImpl extends DefaultServiceImpl<ServiceModel, Long, S
 
   @Override
   public ServiceModel newService() {
-    return this.repository.findTopByStatusOrderByCreatedAtDesc(ServiceEnum.CREADO);
+    return this.repository.findTopByStatusOrderByCreatedAtDesc(String.valueOf(ServiceEnum.CREADO));
   }
 }
