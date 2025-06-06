@@ -5,4 +5,6 @@ import com.losconfort.confortstarterrest.helper.DefaultRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProcedureRepository extends DefaultRepository<ProcedureModel, Long> {}
+public interface ProcedureRepository extends DefaultRepository<ProcedureModel, Long> {
+  boolean existsByName(String name);
+}

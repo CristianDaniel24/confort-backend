@@ -12,4 +12,8 @@ public interface ProductRepository extends DefaultRepository<ProductModel, Long>
   Long getTotalStock();
 
   ProductModel findFirstByStockGreaterThanOrderByStockAsc(Long stock);
+
+  boolean existsByName(String name);
+
+  boolean existsByCode(String code);
 }

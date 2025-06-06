@@ -20,3 +20,13 @@ spring:
           auth: true
           starttls:
             enable: true
+backup:
+  dir: C:/Users/crist/Documents/SENA/TAPICERIA CONFORT/Copia_seguridad
+postgres:
+  user: cristian
+  password: clancy242005
+  db: confort
+  host: localhost
+  port: 5432
+  pgDumpPath: "C:/Program Files/PostgreSQL/17/bin/pg_dump.exe"
+  psqlPath: "C:/Program Files/PostgreSQL/17/bin/psql.exe"
