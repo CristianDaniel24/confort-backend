@@ -2,7 +2,7 @@
 FROM maven:3.9.6-eclipse-temurin-22 AS build
 WORKDIR /app
 
-# Copia todo el contenido del repo (ya estamos en la raíz del monorepo)
+# Copia todo el contenido de la carpeta confort (donde está el Dockerfile)
 COPY . .
 
 # Compila el proyecto y salta los tests
@@ -12,8 +12,8 @@ RUN mvn clean install -DskipTests
 FROM eclipse-temurin:22-jdk
 WORKDIR /app
 
-# Copia el JAR generado por el módulo confort
-COPY --from=build /app/confort/target/confort-0.1.0-SNAPSHOT.jar app.jar
+# Copia el JAR generado por el build anterior
+COPY --from=build /app/target/confort-0.1.0-SNAPSHOT.jar app.jar
 
 # Expone el puerto por defecto
 EXPOSE 8080
