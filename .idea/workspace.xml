@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3bf60a7-7bd2-4ec6-898e-15d2dd6f6ca6" name="Changes" comment="" />
+    <list default="true" id="a3bf60a7-7bd2-4ec6-898e-15d2dd6f6ca6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/confort-0.1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/confort-0.1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/confort-0.1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/confort-0.1.0-SNAPSHOT.jar.original" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
