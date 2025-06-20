@@ -26,7 +26,12 @@ public class SecurityConfiguration {
 
     http.cors(cors -> cors.configurationSource(corsConfigurationSource()))
         .csrf(AbstractHttpConfigurer::disable)
-        .authorizeHttpRequests(req -> req.requestMatchers("/**").permitAll());
+        .authorizeHttpRequests(
+            req ->
+                req.requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**")
+                    .permitAll()
+                    .requestMatchers("/**")
+                    .permitAll());
 
     return http.build();
   }
@@ -37,8 +42,8 @@ public class SecurityConfiguration {
     configuration.setAllowedOrigins(
         List.of(
             "http://localhost:3000",
-            "https://confort-frontend.vercel.app" // Reemplazar por el dominio real si cambia
-            ));
+            "https://confort-frontend.vercel.app",
+            "https://confort-frontend-60oyjtpyn-cristianponguta789-4927s-projects.vercel.app"));
     configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
     configuration.setAllowedHeaders(List.of("Content-Type", "Authorization"));
     configuration.setAllowCredentials(true);
