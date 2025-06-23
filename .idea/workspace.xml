@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a3bf60a7-7bd2-4ec6-898e-15d2dd6f6ca6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/confort/src/main/java/com/losconfort/confort/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/application-prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/application-prod.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/config/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/RecoveryPasswordImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/confort/target/classes/com/losconfort/confort/service/impl/RecoveryPasswordImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +50,7 @@
     &quot;Maven.confort-starter-rest [install].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/crist/Documents/Java/PrincipiosSOLID-PatronesDiseño/Patrones Diseño/abstract-factory&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,

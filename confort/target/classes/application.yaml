@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: prod
+    active: dev
   jpa:
     hibernate:
       ddl-auto: none
@@ -9,19 +9,10 @@ spring:
       minimum-idle: 5
       idle-timeout: 30000
       max-lifetime: 60000
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: tapiceria.confort24@gmail.com
-    password: bjwnkfaqdwqhpmeu
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
+
 backup:
   dir: C:/Users/crist/Documents/SENA/TAPICERIA CONFORT/Copia_seguridad
+
 postgres:
   user: cristian
   password: clancy242005
